@@ -1,11 +1,11 @@
 import { HeaderLayout } from "@/components/Layouts/HeaderLayout";
-import { Cards } from "@/features/Users/Cards";
+import { UserCards } from "@/features/Users/UserCards";
 
 const UserManagement = () => {
   return (
     <>
       <HeaderLayout>
-        <Cards />
+        <UserCards />
       </HeaderLayout>
     </>
   );
