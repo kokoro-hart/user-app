@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { axios } from "@/libs";
 import { User } from "@/types/api";
 
-import { useMessage } from "../useMessage";
+import { useMessage } from "./useMessage";
 
 export const useLogin = () => {
   const router = useRouter();

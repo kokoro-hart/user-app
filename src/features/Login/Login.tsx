@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from "react";
 
 import { ButtonPrimary } from "@/components/Elements/Button";
 
-import { useLogin } from "./hooks/useLogin";
+import { useLogin } from "./hooks";
 
 export const Login = () => {
   const [userId, setUserId] = useState("");
