@@ -16,21 +16,9 @@ type ModalProps = {
   user: User | undefined;
   isOpen: boolean;
   onClose: () => void;
-  // imageUrl: string;
-  // userName: string;
-  // fullName: string;
-  // onClick: () => void;
 };
 
-export const UserModal = ({
-  user,
-  isOpen,
-  onClose,
-}: // imageUrl,
-// userName,
-// fullName,
-// onClick,
-ModalProps) => {
+export const UserModal = ({ user, isOpen, onClose }: ModalProps) => {
   if (user === undefined) return <></>;
   const { username, name, email, phone } = user;
   return (
