@@ -31,7 +31,7 @@ export const UserModal = ({
 // fullName,
 // onClick,
 ModalProps) => {
-  if (user === undefined) return <div>ユーザーが見つかりませんでした。</div>;
+  if (user === undefined) return <></>;
   const { username, name, email, phone } = user;
   return (
     <Modal isOpen={isOpen} onClose={onClose} motionPreset="slideInBottom">
