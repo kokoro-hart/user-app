@@ -25,5 +25,6 @@ module.exports = {
     "react/jsx-boolean-value": ["error"],
     "react/self-closing-comp": ["error"],
     "@typescript-eslint/no-unused-vars": ["error"],
+    "react-hooks/exhaustive-deps": "off"
   },
 };

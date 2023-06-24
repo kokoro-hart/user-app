@@ -13,7 +13,7 @@ export const useLogin = () => {
 
   useEffect(() => {
     router.prefetch("/home/");
-  });
+  }, []);
 
   const getUser = (id: string): Promise<User> => {
     const option = {
