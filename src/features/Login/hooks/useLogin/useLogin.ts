@@ -1,14 +1,19 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-import { useMessage } from "@/hooks/useMessage";
 import { axios } from "@/libs";
 import { User } from "@/types/api";
+
+import { useMessage } from "../useMessage";
 
 export const useLogin = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const { showMessage } = useMessage();
+
+  useEffect(() => {
+    router.prefetch("/home/");
+  });
 
   const getUser = (id: string): Promise<User> => {
     const option = {
