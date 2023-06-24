@@ -1,0 +1,9 @@
+:root {
+  --color-primary: #4682b4;
+  --color-white: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

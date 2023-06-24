@@ -1,0 +1,56 @@
+{
+  "name": "nextjs-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint": "eslint ./src --ext .ts,.tsx --fix --max-warnings=0 --cache --ignore-path .gitignore",
+    "format": "prettier ./src --write --ignore-path .gitignore",
+    "check-types": "tsc --project tsconfig.json --pretty --noEmit",
+    "validate": "npm run check-types && lint-staged --no-stash",
+    "commitmsg": "commitlint --edit ${1}",
+    "new:fc": "hygen new fc"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --ext .ts,.tsx --fix --max-warnings=0 --cache --ignore-path .gitignore",
+    "*.{ts,tsx,json}": "prettier --write --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "ress": "^5.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@emotion/react": "^11.10.5",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-vite": "^0.4.1",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.34.0",
+    "eslint-config-next": "^13.1.6",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "husky": "^8.0.3",
+    "hygen": "^6.2.11",
+    "lint-staged": "^13.1.1",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1"
+  }
+}
