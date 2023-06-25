@@ -5,6 +5,7 @@ import { Spinner } from "@chakra-ui/spinner";
 import { useEffect, useCallback } from "react";
 
 import { useAllUsers } from "@/features/Users/hooks";
+import { useLoginUser } from "@/features/Users/hooks";
 
 import { useSelectUsers } from "../hooks/useSelectUsers";
 import { UserModal } from "../Modal";
@@ -14,6 +15,7 @@ export const UserCards = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { getUsers, users, isLoading } = useAllUsers();
   const { onSelectUser, selectedUsers } = useSelectUsers();
+  const { loginUser } = useLoginUser();
 
   const onClickUser = useCallback(
     (id: number) => {
@@ -45,7 +47,12 @@ export const UserCards = () => {
         </Wrap>
       )}
 
-      <UserModal user={selectedUsers} isOpen={isOpen} onClose={onClose} />
+      <UserModal
+        user={selectedUsers}
+        isOpen={isOpen}
+        onClose={onClose}
+        isAdmin={loginUser?.isAdmin}
+      />
     </>
   );
 };
